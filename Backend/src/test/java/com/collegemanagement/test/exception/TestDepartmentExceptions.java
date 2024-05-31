@@ -111,7 +111,7 @@ public class TestDepartmentExceptions {
 	}
 
 	@Test
-	void testExceptionIsThrownAndHandledIfDepartmentIdIsNotValidWhileGettingDoctorById() throws Exception {
+	void testExceptionIsThrownAndHandledIfDepartmentIdIsNotValidWhileGettingDepartmentById() throws Exception {
 		Long id = 211L;
 
 		ErrorResponse exResponse = new ErrorResponse(HttpStatus.NOT_FOUND.value(),
