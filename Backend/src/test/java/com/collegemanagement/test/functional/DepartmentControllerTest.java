@@ -146,7 +146,7 @@ class DepartmentControllerTest {
 	/************************ Delete Department ****************/
 
 	@Test
-	void testRestEndpointForDeletingDoctorIsExposedAndWorking() throws Exception {
+	void testRestEndpointForDeletingDepartmentIsExposedAndWorking() throws Exception {
 		DepartmentDTO departmentDTO = MasterData.getDepartmentDTO();
 		Long id = departmentDTO.getId();
 		Mockito.when(departmentService.deleteDepartment(id)).thenReturn(true);
