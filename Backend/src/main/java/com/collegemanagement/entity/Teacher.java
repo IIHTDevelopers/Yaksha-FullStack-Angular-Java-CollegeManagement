@@ -10,18 +10,12 @@ import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 
-@Entity
-@Table(name = "teachers")
 public class Teacher {
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+
 	private Long id;
 
 	private String name;
 
-	@ManyToOne
-	@JoinColumn(name = "department_id")
-	@JsonBackReference
 	private Department department;
 
 	public Teacher() {
@@ -60,3 +54,4 @@ public class Teacher {
 	}
 
 }
+
