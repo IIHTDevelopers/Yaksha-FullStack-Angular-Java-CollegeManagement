@@ -12,21 +12,13 @@ import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 
-@Entity
-@Table(name = "departments")
 public class Department {
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 
 	private String name;
 
-	@JsonManagedReference
-	@OneToMany(mappedBy = "department", cascade = CascadeType.ALL)
 	private List<Student> students;
 
-	@JsonManagedReference
-	@OneToMany(mappedBy = "department", cascade = CascadeType.ALL)
 	private List<Teacher> teachers;
 
 	public Department() {
@@ -73,3 +65,4 @@ public class Department {
 		this.teachers = teachers;
 	}
 }
+
